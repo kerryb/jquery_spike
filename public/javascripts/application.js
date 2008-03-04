@@ -15,10 +15,11 @@ $(function() {
 		activeClass: 'droppable-active',
 		hoverClass: 'droppable-hover',
 		drop: function(ev, ui) {
-			$(this).append('<a href="ajaxLogin.html?height=85&width=250&modal=true" class="thickbox" title="New Call">login (modal)</a>  ');
-			$("#new_element").dialog({buttons: {"OK": function(){alert("OK")},
-				"Cancel": function(){alert("cancel");$("this").dialog("close");alert("done")}},
-				width: 200, height: 100});
+			var id = prompt("Enter ID for new object");
+			jQuery.post("/calls", "id=" + id + "&x=" + ev.pageX + "&y=" + ev.pageY,
+				function (data, textStatus) {
+				  $("#canvas").append(data);
+				});
 		}
 	});
 });

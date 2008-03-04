@@ -23,17 +23,17 @@
 	background-color: #DFD;
 }
 
+#canvas .call {
+	padding: 2px;
+	margin: 2px;
+	border: 1px solid black;
+  position: absolute;
+}
+
 .droppable-active {
 	background-color: #DDD;
 }
 
 .droppable-hover {
 	border-width: 2px !important;
-}
-
-.dialog {
-	width: 100px;
-	padding: 2px;
-	margin: 2px;
-	border: 1px solid black;
 }
