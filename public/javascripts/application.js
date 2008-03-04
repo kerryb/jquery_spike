@@ -7,7 +7,7 @@ jQuery.ajaxSetup({
   'beforeSend': function(xhr) {xhr.setRequestHeader("Accept", "text/javascript")}
 })
 
-// This gets executed once the page has finished laoding
+// This gets executed once the page has finished loading
 $(function() {
 	$(".draggable").draggable({helper: 'clone'});
 	$("#canvas").droppable({
@@ -15,7 +15,10 @@ $(function() {
 		activeClass: 'droppable-active',
 		hoverClass: 'droppable-hover',
 		drop: function(ev, ui) {
-			$(this).append("<p>Dropped!</p>");
+			$(this).append('<a href="ajaxLogin.html?height=85&width=250&modal=true" class="thickbox" title="New Call">login (modal)</a>  ');
+			$("#new_element").dialog({buttons: {"OK": function(){alert("OK")},
+				"Cancel": function(){alert("cancel");$("this").dialog("close");alert("done")}},
+				width: 200, height: 100});
 		}
 	});
 });

@@ -1,0 +1,39 @@
+#palette {
+	float: left;
+	width: 60px;
+	height: 100%;
+	border: 1px solid red;
+}
+
+#canvas {
+	float: right;
+	width: 800px;
+	height: 500px;
+	border: 1px solid green;
+}
+
+#palette .new_element {
+	width: 50px;
+	padding: 2px;
+	margin: 2px;
+	border: 1px solid black;
+}
+
+.call {	
+	background-color: #DFD;
+}
+
+.droppable-active {
+	background-color: #DDD;
+}
+
+.droppable-hover {
+	border-width: 2px !important;
+}
+
+.dialog {
+	width: 100px;
+	padding: 2px;
+	margin: 2px;
+	border: 1px solid black;
+}
